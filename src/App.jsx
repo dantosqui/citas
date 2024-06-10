@@ -18,11 +18,11 @@ function App() {
 
       </div>
 
-      <div class="citaslist">
+      <div className="citaslist">
       <h2>ADMINISTRA TUS CITAS</h2>
       
       <Listado citas={citas} setCitas={setCitas}></Listado>
-
+      {console.log(citas)}
       </div>
 
     </div>

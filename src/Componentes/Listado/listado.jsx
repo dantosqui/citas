@@ -1,12 +1,17 @@
-import "../CitaCard/CitaCard.jsx"
+import CitaCard from "../CitaCard/CitaCard.jsx"
 
-function Listado() {
+function Listado(props) {
 
+    function Eliminar(index) {
+        props.setCitas(prevCitas => prevCitas.filter((_, i) => i !== index));
+    }
 
     return(
         <>
         
-        
+        {props.citas.map((cita,index) =>(
+            <CitaCard i={index} eliminar={Eliminar} mascota={cita.nombre} dueño={cita.dueño} fecha={cita.fecha} hora={cita.hora} sintomas={cita.sintomas}></CitaCard>
+        ))}
 
         </>
     )
