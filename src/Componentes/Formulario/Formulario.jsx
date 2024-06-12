@@ -11,6 +11,8 @@ function Formulario(props) {
     const [sintomas, setSintomas] = useState('');
 
     function crearcita(event) {
+        // eslint-disable-next-line no-restricted-globals
+        if (confirm("¿Seguro que quieres crear la cita?")){
         event.preventDefault(); 
 
         const nuevaCita = {
@@ -27,7 +29,7 @@ function Formulario(props) {
         setDueño('');
         setFecha('');
         setHora('');
-        setSintomas('')
+        setSintomas('')}
     }
 
 
@@ -51,7 +53,7 @@ function Formulario(props) {
             <label htmlFor="sintomas"></label>
             <textarea id="sintomas" className='u-full-width' type="text" value={sintomas} onChange={(e) => setSintomas(e.target.value)} placeholder='Describe los sintomas...'/>
         
-        <button className="u-full-width button-primary" onClick={crearcita}>Enviar</button>
+             <button type="button" className="u-full-width button-primary" onClick={crearcita}>Enviar</button>
         
         
 

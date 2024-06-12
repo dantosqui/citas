@@ -3,7 +3,11 @@ import CitaCard from "../CitaCard/CitaCard.jsx"
 function Listado(props) {
 
     function Eliminar(index) {
-        props.setCitas(prevCitas => prevCitas.filter((_, i) => i !== index));
+        // eslint-disable-next-line no-restricted-globals
+        if (confirm("¿Seguro que quieres borrar la cita?"))
+            props.setCitas(prevCitas => prevCitas.filter((_, i) => i !== index));
+        
+    
     }
 
     return(
