@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import './formulario.css'
 
 function Formulario(props) {
 
@@ -32,30 +33,30 @@ function Formulario(props) {
 
     return(
 
-        <>
+        <form>
        
-
-       <label htmlFor="nombre">Nombre:</label>
-            <input id="nombre" type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} />
+        
+            <label htmlFor="nombre">Nombre:</label>
+            <input id="nombre" className='u-full-width' type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} placeholder='Nombre de la mascota' />
             
             <label htmlFor="dueño">Dueño:</label>
-            <input id="dueño" type="text" value={dueño} onChange={(e) => setDueño(e.target.value)} />
+            <input id="dueño" className='u-full-width' type="text" value={dueño} onChange={(e) => setDueño(e.target.value)} placeholder='Nombre del dueño de la mascota'/>
             
             <label htmlFor="fecha">Fecha:</label>
-            <input id="fecha" type="date" value={fecha} onChange={(e) => setFecha(e.target.value)} />
+            <input id="fecha" className='u-full-width' type="date" value={fecha} onChange={(e) => setFecha(e.target.value)} />
             
             <label htmlFor="hora">Hora:</label>
-            <input id="hora" type="time" value={hora} onChange={(e) => setHora(e.target.value)} />
+            <input id="hora" className='u-full-width' type="time" value={hora} onChange={(e) => setHora(e.target.value)} />
 
             <label htmlFor="sintomas"></label>
-            <input id="sintomas" type="text" value={sintomas} onChange={(e) => setSintomas(e.target.value)} />
+            <textarea id="sintomas" className='u-full-width' type="text" value={sintomas} onChange={(e) => setSintomas(e.target.value)} placeholder='Describe los sintomas...'/>
         
-        <button onClick={crearcita}>Enviar</button>
+        <button className="u-full-width button-primary" onClick={crearcita}>Enviar</button>
         
         
 
 
-        </>
+        </form>
     )
 }
 
