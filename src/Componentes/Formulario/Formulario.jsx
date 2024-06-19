@@ -51,7 +51,7 @@ function Formulario(props) {
             <input id="hora" className='u-full-width' type="time" value={hora} onChange={(e) => setHora(e.target.value)} />
 
             <label htmlFor="sintomas"></label>
-            <textarea id="sintomas" className='u-full-width' type="text" value={sintomas} onChange={(e) => setSintomas(e.target.value)} placeholder='Describe los sintomas...'/>
+            <textarea id="sintomas" maxLength={206} className='u-full-width' type="text" value={sintomas} onChange={(e) => setSintomas(e.target.value)} placeholder='Describe los sintomas...'/>
         
              <button type="button" className="u-full-width button-primary" onClick={crearcita}>Enviar</button>
         

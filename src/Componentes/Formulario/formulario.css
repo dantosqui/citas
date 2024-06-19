@@ -12,3 +12,7 @@ label {
         box-shadow: none;
         box-sizing: border-box;
       }
+textarea{
+  height: 10vh;
+  resize: none;
+}
