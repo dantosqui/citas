@@ -11,6 +11,7 @@ function Formulario(props) {
     const [sintomas, setSintomas] = useState('');
 
     function crearcita(event) {
+        if (nombre !=="" && dueño !=="" && fecha !=="" && hora !=="" && sintomas !==""){
         // eslint-disable-next-line no-restricted-globals
         if (confirm("¿Seguro que quieres crear la cita?")){
         event.preventDefault(); 
@@ -30,6 +31,11 @@ function Formulario(props) {
         setFecha('');
         setHora('');
         setSintomas('')}
+        
+    }
+    else{
+        alert("Verifique que haya ingresado todos los campos - perdon por la alert jiji")
+    }
     }
 
 
@@ -39,7 +45,7 @@ function Formulario(props) {
        
         
             <label htmlFor="nombre">Nombre:</label>
-            <input id="nombre" className='u-full-width' type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} placeholder='Nombre de la mascota' />
+            <input id="nombre" className='u-full-width' type="text"  value={nombre} onChange={(e) => setNombre(e.target.value)} placeholder='Nombre de la mascota' />
             
             <label htmlFor="dueño">Dueño:</label>
             <input id="dueño" className='u-full-width' type="text" value={dueño} onChange={(e) => setDueño(e.target.value)} placeholder='Nombre del dueño de la mascota'/>
